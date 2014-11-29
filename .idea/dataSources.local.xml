@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails sf_film_map: development" uuid="19da1d7d-29b4-4593-8009-7f6e286601a8">
+      <user-name>&lt;%= ENV[&quot;psql_username&quot;] %&gt;</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df88dfdadfd9dfdbdfc6dff5dfdadfcbdfd9dfd9dfdddfc5dfd8dfcedf88dff7df8adf8fdf94</user-password>
+    </data-source>
+    <data-source name="Rails sf_film_map: test" uuid="d6409c32-a13a-4416-86c9-b97c1392ffba">
+      <user-name>&lt;%= ENV[&quot;psql_username&quot;] %&gt;</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df88dfdadfd9dfdbdfc6dff5dfdadfcbdfd9dfd9dfdddfc5dfd8dfcedf88dff7df8adf8fdf94</user-password>
+    </data-source>
+    <data-source name="Rails sf_film_map: production" uuid="43e9d05f-52d2-4063-9e6b-ad398d8455f3">
+      <user-name>&lt;%= ENV[&quot;psql_username&quot;] %&gt;</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df88dfdadfd9dfdbdfc6dff5dfdadfcbdfd9dfd9dfdddfc5dfd8dfcedf88dff7df8adf8fdf94</user-password>
+    </data-source>
+  </component>
+</project>

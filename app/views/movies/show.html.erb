@@ -1,0 +1,62 @@
+<div id="movie_title">
+ <%= @movie.movie_title %>
+</div>
+
+<table>
+  <tr>
+  <td>
+    <img class='movie-poster'src="<%=@result.poster%>"/>
+  </td>
+  <td class="movie">
+      <div id="map-canvas" class="movie"></div>
+  </td>
+  </tr>
+</table>
+
+      <br>
+      <div class="movie-details">
+      	<br>
+      	<div class="movie-subtitle">Plot:</div>
+      	<%= @result.plot %>
+          <br>
+          <br>
+        <div class="movie-subtitle">Date Released:</div>
+        <%= @result.year %>
+        <br>
+        <br>
+        <div class="movie-subtitle">Director:</div>
+        <%= @movie.director%>
+       <br>
+       <br>
+        <div class="movie-subtitle">Actors</div>
+        <%= @result.actors.join(', ') %>
+        <br>
+        <br>
+        <div class="movie-subtitle">Genre(s):</div>
+        <%= @result.genres.join(', ') %>
+    </div>
+
+
+
+<table>
+  <tr>
+    <th>Address</th>
+  </tr>
+
+<% @movie.locations.each do |location| %>
+  <tr>
+    <td><%= location.address %></td>
+  </tr>
+<% end %>
+</table>
+
+<script>
+  var locationData = <%= @locations.to_json.html_safe %>;
+</script>
+
+<%= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js", "https://maps.googleapis.com/maps/api/js?key=AIzaSyDrCN9KO9IjWfxF2cQ69kievg03j4Mdyi0&sensor=false", "movie_map" %>
+
+<%= link_to 'New Location', new_movie_location_path(@movie) %>
+
+<%= link_to 'Back', map_path %>
+

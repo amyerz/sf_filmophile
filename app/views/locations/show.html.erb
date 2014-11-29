@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+<style>
+#map { height: 300px; }
+</style>
+
+<p>
+  <b>Address:</b>
+  <%= @location.address %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @location.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @location.longitude%>
+</p>
+
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@location.latitude}%2C#{@location.longitude}" %>
+<br>
+
+<%= link_to 'Edit', edit_location_path(@location) %> |
+<%= link_to 'Back', locations_path %>
+
+<div id="map"></div>
+
+<script>
+var map = L.map('map').setView([<%= @location.latitude %>, <%= @location.longitude %>], 13);
+L.tileLayer('http://{s}.tile.cloudmade.com/732a9a99f84148c09eeb8aed10d80696/997/256/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+    maxZoom: 18
+}).addTo(map);
+
+var marker = L.marker([<%= @location.latitude %>, <%= @location.longitude %>]).addTo(map);
+
+
+
+</script>
+

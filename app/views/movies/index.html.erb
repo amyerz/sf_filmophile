@@ -1,0 +1,27 @@
+<h1>Listing of Movies Filmed in San Francisco</h1>
+<%= link_to 'Add New Movie', new_movie_path %>
+<div class="list">
+<table class="table">
+  <tr>
+    <th>Movie Title</th>
+    <th>Year Released</th>
+    <th>Director</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @movies.each do |movie| %>
+  <tr>
+    <td><%= movie.movie_title %></td>
+    <td><%= movie.release_year %></td>
+    <td><%= movie.director %></td>
+    <td><%= link_to 'Show', movie_path(movie) %></td>
+    <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
+    
+  </tr>
+<% end %>
+</table>
+</div>
+<br />
+

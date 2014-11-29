@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Rails sf_film_map: development" uuid="19da1d7d-29b4-4593-8009-7f6e286601a8">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="Rails sf_film_map: test" uuid="d6409c32-a13a-4416-86c9-b97c1392ffba">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="Rails sf_film_map: production" uuid="43e9d05f-52d2-4063-9e6b-ad398d8455f3">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>
