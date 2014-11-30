@@ -1,3 +1,8 @@
+//= require jquery
+//= require jquery_ujs
+//= require_tree .
+
+
 $(function () {
   var defaultLatLng = new google.maps.LatLng(37.7750, -122.4183);
   google.maps.visualRefresh = true;

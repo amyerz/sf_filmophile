@@ -27,7 +27,8 @@
 #map-canvas.index {
   border: 1px solid black;
   width: 100%;
-    height: 100%;
+    max-width: none;
+  height: 100%;
 }
 
 #map-canvas.movie {
