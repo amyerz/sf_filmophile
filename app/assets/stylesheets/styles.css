@@ -1,15 +1,5 @@
 body {
-  background-image:url('http://s3.amazonaws.com/auteurs_production/post_images/1744/4-star-screen.jpg?1285711328');
-	color: #799cbd;
-	margin:80px;
-	font-family: 'Noto Sans', sans-serif;
-	font-size: 18px;
-	background-position: center;
-	background-attachment: fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+
 }
 
 nav {
