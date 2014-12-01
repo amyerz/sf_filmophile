@@ -6,16 +6,17 @@ $(function () {
     var customStyle =
         [{"featureType":"administrative","elementType":"all","stylers":[{"visibility":"on"},{"saturation":-100},{"lightness":20}]},{"featureType":"road","elementType":"all","stylers":[{"visibility":"on"},{"saturation":-100},{"lightness":40}]},{"featureType":"water","elementType":"all","stylers":[{"visibility":"on"},{"saturation":-10},{"lightness":30}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"visibility":"simplified"},{"saturation":-60},{"lightness":10}]},{"featureType":"landscape.natural","elementType":"all","stylers":[{"visibility":"simplified"},{"saturation":-60},{"lightness":60}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"},{"saturation":-100},{"lightness":60}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"},{"saturation":-100},{"lightness":60}]}]
     google.maps.visualRefresh = true;
-  var map = window.map = new google.maps.Map(document.querySelector("#map-canvas"), {
-    center: defaultLatLng,
-    zoom: 13,
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
+
+    var map = window.map = new google.maps.Map(document.querySelector("#map-canvas"), {
+        center: defaultLatLng,
+        zoom: 13,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
       styles: customStyle
   });
 
   var markers = {};
 
-  var infowindow= new google.maps.InfoWindow({maxWidth:300});
+  var infowindow= new google.maps.InfoWindow({maxWidth:"none"});
 
   google.maps.event.addListener(map, "bounds_changed", function () {
     var bounds, marker;

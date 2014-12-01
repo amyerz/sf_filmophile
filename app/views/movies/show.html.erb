@@ -1,40 +1,46 @@
-<div id="movie_title">
- <%= @movie.movie_title %>
-</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12">
+      <div id="movie_title">
+        <%= @movie.movie_title %>
+      </div>
+    </div>
+  </div>
 
-<table>
-  <tr>
-  <td>
-    <img class='movie-poster'src="<%=@result.poster%>"/>
-  </td>
-  <td class="movie">
-      <div id="map-canvas" class="movie"></div>
-  </td>
-  </tr>
-</table>
+  <div class="row">
 
-      <br>
+    <div class="col-lg-2">
+      <img class='movie-poster'src="<%=@result.poster%>"/>
+    </div>
+
+    <div class="col-lg-9">
       <div class="movie-details">
-      	<br>
-      	<div class="movie-subtitle">Plot:</div>
-      	<%= @result.plot %>
-          <br>
-          <br>
+        <br>
+        <div class="movie-subtitle">Plot:</div>
+        <%= @result.plot %>
+        <br>
+        <br>
         <div class="movie-subtitle">Date Released:</div>
         <%= @result.year %>
         <br>
         <br>
         <div class="movie-subtitle">Director:</div>
         <%= @movie.director%>
-       <br>
-       <br>
+        <br>
+        <br>
         <div class="movie-subtitle">Actors</div>
         <%= @result.actors.join(', ') %>
         <br>
         <br>
         <div class="movie-subtitle">Genre(s):</div>
         <%= @result.genres.join(', ') %>
+      </div>
     </div>
+
+  </div>
+
+
+
 
 
 
