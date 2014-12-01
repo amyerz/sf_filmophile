@@ -12,3 +12,6 @@
  *= require_tree .
  */
 
+body{
+    font-family: 'Roboto', sans-serif !important;
+}
