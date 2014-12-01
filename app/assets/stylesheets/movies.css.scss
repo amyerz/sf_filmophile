@@ -18,13 +18,14 @@
   height: 100%;
 }
 
+
 #map-canvas img {
   max-width: none !important;
 }
 
 #map-canvas.movie {
   border: 3px solid white;
-  height: 100%;
+  height: 300px;
   width: 100%;
 }
 
@@ -34,7 +35,7 @@ td.movie{
 }
 
 .movie-poster{
-  border:3px solid white;
+  border:3px solid;
   margin-right: 15px;
 }
 
@@ -49,4 +50,10 @@ td.movie{
 
 .movie-subtitle{
   font-weight: bold;
+}
+
+.movie-detail{
+  top: 50px;
+  left: 0;
+  position: relative;
 }
