@@ -1,15 +1,16 @@
-//= require jquery
-//= require jquery_ujs
-//= require_tree .
 
 
 $(function () {
-  var defaultLatLng = new google.maps.LatLng(37.7750, -122.4183);
-  google.maps.visualRefresh = true;
+  var defaultLatLng = new google.maps.LatLng(37.773659, -122.447863);
+
+    var customStyle =
+        [{"featureType":"administrative","elementType":"all","stylers":[{"visibility":"on"},{"saturation":-100},{"lightness":20}]},{"featureType":"road","elementType":"all","stylers":[{"visibility":"on"},{"saturation":-100},{"lightness":40}]},{"featureType":"water","elementType":"all","stylers":[{"visibility":"on"},{"saturation":-10},{"lightness":30}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"visibility":"simplified"},{"saturation":-60},{"lightness":10}]},{"featureType":"landscape.natural","elementType":"all","stylers":[{"visibility":"simplified"},{"saturation":-60},{"lightness":60}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"},{"saturation":-100},{"lightness":60}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"},{"saturation":-100},{"lightness":60}]}]
+    google.maps.visualRefresh = true;
   var map = window.map = new google.maps.Map(document.querySelector("#map-canvas"), {
     center: defaultLatLng,
-    zoom: 15,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
+    zoom: 13,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+      styles: customStyle
   });
 
   var markers = {};
@@ -59,7 +60,7 @@ $(function () {
 
   }
 
-  
+
 
 
   document.querySelector("form").addEventListener("submit", function (event) {
