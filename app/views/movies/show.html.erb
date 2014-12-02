@@ -22,7 +22,7 @@
   <div class="row">
 
     <div class="col-lg-2">
-      <img class='movie-poster'src="<%=@result.poster%>"/>
+      <img class='movie-poster'src="<%=@result.poster if !@result.poster.blank?%>"/>
     </div>
 
 
@@ -43,11 +43,11 @@
         <br>
         <br>
         <div class="movie-subtitle">Actors</div>
-        <%= @result.actors.join(', ') %>
+        <%= @result.actors.join(', ')if !@result.actors.blank? %>
         <br>
         <br>
         <div class="movie-subtitle">Genre(s):</div>
-        <%= @result.genres.join(', ') %>
+        <%= @result.genres.join(', ')if !@result.genres.blank? %>
       </div>
     </div>
 
