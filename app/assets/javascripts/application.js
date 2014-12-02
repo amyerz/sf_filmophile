@@ -40,7 +40,8 @@ $(function () {
           marker = markers[location.id] = new google.maps.Marker({
             position: location._latlng,
             map: map,
-            title: location.address
+            title: location.address,
+                animation: google.maps.Animation.DROP
           });
           addClickListener(marker,location);
         }

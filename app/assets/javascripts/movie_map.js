@@ -15,7 +15,7 @@ $(function () {
 
     var markers = {};
 
-    var infowindow= new google.maps.InfoWindow({maxWidth:300});
+    var infowindow= new google.maps.InfoWindow({maxWidth:"300"});
 
     google.maps.event.addListener(map, "bounds_changed", function () {
         var bounds, marker;
@@ -39,13 +39,16 @@ $(function () {
                     marker = markers[location.id] = new google.maps.Marker({
                         position: location._latlng,
                         map: map,
-                        title: location.address
+                        title: location.address,
+                        animation: google.maps.Animation.DROP
+
                     });
                     addClickListener(marker,location);
                 }
             }
         });
     });
+
 
     function addClickListener(marker,currentLocation) {
         google.maps.event.addListener(marker, 'click', function() {
@@ -59,8 +62,6 @@ $(function () {
         });
 
     }
-
-
 
 
     document.querySelector("form").addEventListener("submit", function (event) {
