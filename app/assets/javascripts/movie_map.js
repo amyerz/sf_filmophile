@@ -9,7 +9,8 @@ $(function () {
         center: defaultLatLng,
         zoom: 13,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-        styles: customStyle
+        styles: customStyle,
+        scrollwheel: false
     });
 
     var markers = {};
